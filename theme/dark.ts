@@ -1,0 +1,18 @@
+export const darkTheme = {
+  primaryBG: "#121214",
+  secondary: "#1c1c1e",
+  bg_gray: "#1c1c1e",
+  bg_white: "#121214",
+  white: "#f5f5f5",
+  buttonPrimary: "#3aa3da",
+  buttonSecondary: "#6c11da",
+  border: "#3a3a3d",
+  buttonWarning: "#ff4f9a",
+  darkBlue: "#a6b2f0",
+  gradientStart: "#3aa3da",
+  gradientEnd: "#6c11da",
+  textPrimary: "#f5f5f5",
+  textSecondary: "#a6b2f0",
+  linkHover: "#ff4f9a",
+  success: "#2ecc71",
+}

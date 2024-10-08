@@ -1,0 +1,20 @@
+export const lightTheme = {
+  colors: {
+    primaryBG: "#f5f6f7",
+    secondary: "#ffffff",
+    bg_gray: "#f5f6f7",
+    bg_white: "#ffffff",
+    white: "#ffffff",
+    buttonPrimary: "#3aa3da",
+    buttonSecondary: "#6c11da",
+    border: "#b3b7be",
+    buttonWarning: "#eb257a",
+    darkBlue: "#1e2667",
+    gradientStart: "#3aa3da",
+    gradientEnd: "#6c11da",
+    textPrimary: "#1e2667",
+    textSecondary: "#6c11da",
+    linkHover: "#eb257a",
+    success: "#2ecc71",
+  },
+}
