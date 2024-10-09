@@ -1,4 +1,4 @@
-import { Section } from "@/components/Common/Section"
+import { Section } from "@/components/Common/Section/index.styled"
 import { Item, List, Navigation } from "./index.styled"
 
 export default function Nav() {

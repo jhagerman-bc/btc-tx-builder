@@ -1,14 +1,17 @@
 import styled from "styled-components"
 import { AlignItem, FlexDirection, Justify } from "../index.types"
+import { PropsWithChildren } from "react"
 
-export const Container = styled.section<{
-  align?: AlignItem
-  justify?: Justify
-  flexDirection: FlexDirection
-  gap?: number
-}>`
+export const Section = styled.section<
+  PropsWithChildren<{
+    align?: AlignItem
+    justify?: Justify
+    flexDirection?: FlexDirection
+    gap?: number
+  }>
+>`
   display: flex;
-  flex-direction: ${props => props.flexDirection};
+  flex-direction: ${props => (props.flexDirection ? props.flexDirection : FlexDirection.column)};
   padding: 1rem;
   border-radius: 1rem;
   gap: ${props => (props.gap ? props.gap : 1)}rem;

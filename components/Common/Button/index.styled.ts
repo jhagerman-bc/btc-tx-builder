@@ -4,9 +4,11 @@ import { ButtonSize, ButtonType } from "./index.types"
 export const StyledButton = styled.button<{ size: ButtonSize; buttonType: ButtonType }>`
   border-radius: 99rem;
   cursor: ${props => (props.disabled ? "not-allowed" : "pointer")};
+  color: ${props => (props.color ? props.color : props.theme.colors.textPrimary)};
+  border: none;
+  box-sizing: border-box;
 
   ${props => {
-    console.log(props)
     switch (props.size) {
       case ButtonSize.NORMAL: {
         return css`
@@ -28,4 +30,39 @@ export const StyledButton = styled.button<{ size: ButtonSize; buttonType: Button
       }
     }
   }}
+  ${props => {
+    switch (props.buttonType) {
+      case ButtonType.ERROR: {
+        return css`
+          background-color: ${props.theme.colors.warning};
+          color: ${props.theme.colors.primaryBG};
+        `
+      }
+      case ButtonType.PRIMARY: {
+        return css`
+          background-color: ${props.theme.colors.textPrimary};
+          color: ${props.theme.colors.primaryBG};
+        `
+      }
+      case ButtonType.SECONDARY: {
+        return css`
+          border: 1px solid ${props.theme.colors.textPrimary};
+          /* color: ${props.theme.colors.primaryBG}; */
+        `
+      }
+      case ButtonType.SUCCESS: {
+        return css`
+          background-color: ${props.theme.colors.success};
+          color: ${props.theme.colors.primaryBG};
+        `
+      }
+    }
+  }};
+`
+
+export const Buttons = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  gap: 1rem;
 `

@@ -3,6 +3,7 @@ import { AlignItem, Justify } from "./index.types"
 
 export const FlexRow = styled.div<{ gap?: number; align?: AlignItem; justify?: Justify }>`
   display: flex;
+  width: 100%;
   flex-direction: row;
   flex-wrap: wrap;
   gap: ${props => (props.gap ? props.gap : 1)}rem;
@@ -12,6 +13,7 @@ export const FlexRow = styled.div<{ gap?: number; align?: AlignItem; justify?: J
 
 export const FlexColumn = styled.div<{ gap?: number; align?: AlignItem; justify?: Justify }>`
   display: flex;
+  width: 100%;
   flex-direction: column;
   gap: ${props => (props.gap ? props.gap : 1)}rem;
   ${props => props.align && `align-items: ${props.align}`};

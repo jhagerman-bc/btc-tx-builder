@@ -1,4 +1,4 @@
-export const lightTheme = {
+export const lightTheme: any = {
   colors: {
     primaryBG: "#f5f6f7",
     secondary: "#ffffff",
@@ -8,7 +8,7 @@ export const lightTheme = {
     buttonPrimary: "#3aa3da",
     buttonSecondary: "#6c11da",
     border: "#b3b7be",
-    buttonWarning: "#eb257a",
+    warning: "#eb257a",
     darkBlue: "#1e2667",
     gradientStart: "#3aa3da",
     gradientEnd: "#6c11da",
@@ -16,5 +16,6 @@ export const lightTheme = {
     textSecondary: "#6c11da",
     linkHover: "#eb257a",
     success: "#2ecc71",
+    black: "#090c21",
   },
 }

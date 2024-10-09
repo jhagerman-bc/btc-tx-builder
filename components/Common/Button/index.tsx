@@ -5,11 +5,12 @@ export default function Button({
   size = ButtonSize.NORMAL,
   buttonType = ButtonType.PRIMARY,
   type = "button",
-  style,
-  onClick,
   children,
-  disabled,
+  ...all
 }: ButtonProps) {
-  const props = { size, buttonType, type, style, onClick, disabled }
-  return <StyledButton {...props}>{children}</StyledButton>
+  return (
+    <StyledButton size={size} buttonType={buttonType} {...all} type={type}>
+      {children}
+    </StyledButton>
+  )
 }

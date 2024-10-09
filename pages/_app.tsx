@@ -1,9 +1,17 @@
 import { lightTheme } from "@/theme/light"
 import type { AppProps } from "next/app"
+import { Inter } from "@next/font/google"
 import { ThemeProvider, createGlobalStyle } from "styled-components"
 import Layout from "@/components/Layout"
+
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+})
+
 const GlobalStyles = createGlobalStyle`
   body {
+    font-family: ${inter.style.fontFamily}, sans-serif;
     margin: 0px;
     max-width: 100vw;
     overflow-x: hidden;
@@ -14,7 +22,7 @@ const GlobalStyles = createGlobalStyle`
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <ThemeProvider theme={lightTheme}>
+    <ThemeProvider theme={lightTheme as any}>
       <GlobalStyles />
       <Layout>
         <Component {...pageProps} />
